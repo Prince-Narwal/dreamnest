@@ -203,8 +203,6 @@ export async function POST(request: Request) {
   try {
     const scriptUrl = process.env.GOOGLE_SCRIPT_URL;
 
-
-    /*
     if (!scriptUrl) {
       return NextResponse.json(
         {
@@ -214,12 +212,10 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
-      
 
     const formData = await request.json();
 
     // STEP 1: Save enquiry in Google Sheets
-    /*
     const response = await fetch(scriptUrl, {
       method: "POST",
       headers: {
@@ -241,7 +237,6 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
-      */
 
     // STEP 2: Email configuration
     const emailUser = process.env.EMAIL_USER;
