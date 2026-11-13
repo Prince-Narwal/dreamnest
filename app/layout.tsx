@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,6 +25,37 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  );
+}
+*/
+
+
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "DreamNest | Find Your Place to Call Home",
+  description:
+    "Discover a more thoughtful approach to residential real estate with DreamNest, focused on Gurgaon and Delhi NCR.",
+  applicationName: "DreamNest",
+  keywords: [
+    "DreamNest",
+    "real estate",
+    "residential properties",
+    "Gurgaon",
+    "Delhi NCR",
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
